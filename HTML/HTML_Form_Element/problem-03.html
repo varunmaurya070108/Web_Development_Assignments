@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Course Enrollment Form</title>
+</head>
+<body>
+
+<h1>GLA University Noida — Online Course Enrollment</h1>
+<p>GLA University Noida offers technical courses through its online learning platform. Please fill in the
+registration form below to enroll in a course of your choice.</p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTITbK8NJN-0DacAAXKrUH0T8HvSl87oSXhv0JqGsJAsQ&s=10" alt="Online learning illustration" width="500" height="250">
+
+<h2>Registration Form</h2>
+<form action="#" method="post">
+
+  <h3>Account Information</h3>
+
+  <p>
+    <label for="student_name">Full Name:</label><br>
+    <input type="text" id="student_name" name="student_name" minlength="3" maxlength="60" placeholder="Enter your full name" required>
+  </p>
+
+  <p>
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="email" required>
+  </p>
+
+  <p>
+    <label for="password">Create Password:</label><br>
+    <input type="password" id="password" name="password" minlength="8" maxlength="20" required>
+  </p>
+
+  <p>
+    <label for="mobile">Mobile Number:</label><br>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10 digit mobile number" required>
+  </p>
+
+  <p>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" max="2012-12-31" required>
+  </p>
+
+  <h3>Course Selection</h3>
+
+  <p>
+    <label for="course">Select Course:</label><br>
+    <select id="course" name="course" required>
+      <option value="">--Select Course--</option>
+      <option value="Full Stack Web Development">Full Stack Web Development</option>
+      <option value="Python Programming">Python Programming</option>
+      <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
+      <option value="Database Management Systems">Database Management Systems</option>
+      <option value="Machine Learning Basics">Machine Learning Basics</option>
+      <option value="Java Programming">Java Programming</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="batch">Select Batch/Session:</label><br>
+    <select id="batch" name="batch" required>
+      <option value="">--Select Batch--</option>
+      <option value="Morning Batch (9AM-11AM)">Morning Batch (9AM - 11AM)</option>
+      <option value="Afternoon Batch (2PM-4PM)">Afternoon Batch (2PM - 4PM)</option>
+      <option value="Evening Batch (6PM-8PM)">Evening Batch (6PM - 8PM)</option>
+      <option value="Weekend Batch">Weekend Batch</option>
+    </select>
+  </p>
+
+  <p>Preferred Mode of Learning:</p>
+  <input type="radio" id="online" name="learning_mode" value="Online" required>
+  <label for="online">Online</label>
+  <input type="radio" id="offline" name="learning_mode" value="Offline">
+  <label for="offline">Offline</label>
+  <input type="radio" id="hybrid" name="learning_mode" value="Hybrid">
+  <label for="hybrid">Hybrid</label>
+
+  <p>Areas of Interest (select all that apply):</p>
+  <input type="checkbox" id="java" name="interest_areas" value="Java">
+  <label for="java">Java</label><br>
+  <input type="checkbox" id="python" name="interest_areas" value="Python">
+  <label for="python">Python</label><br>
+  <input type="checkbox" id="webdev" name="interest_areas" value="Web Development">
+  <label for="webdev">Web Development</label><br>
+  <input type="checkbox" id="dsa" name="interest_areas" value="Data Structures">
+  <label for="dsa">Data Structures</label><br>
+  <input type="checkbox" id="dbms" name="interest_areas" value="Database">
+  <label for="dbms">Database</label>
+
+  <h3>Educational Background</h3>
+
+  <p>
+    <label for="edu_level">Education Level:</label><br>
+    <select id="edu_level" name="education_level" required>
+      <option value="">--Select Level--</option>
+      <option value="High School">High School</option>
+      <option value="Undergraduate">Undergraduate</option>
+      <option value="Postgraduate">Postgraduate</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="institution">College/Institution Name:</label><br>
+    <input type="text" id="institution" name="institution" maxlength="80" placeholder="e.g. GLA University Noida" required>
+  </p>
+
+  <p>
+    <label for="semester">Current Semester/Year:</label><br>
+    <input type="text" id="semester" name="current_semester" placeholder="e.g. 5th Semester" required>
+  </p>
+
+  <p>
+    <label for="experience">Programming Experience (in years):</label><br>
+    <input type="number" id="experience" name="programming_experience" min="0" max="20" step="1" placeholder="0">
+  </p>
+
+  <p>
+    <label for="portfolio">GitHub / Portfolio URL:</label><br>
+    <input type="url" id="portfolio" name="portfolio_url" placeholder="https://github.com/username">
+  </p>
+
+  <p>
+    <label for="goals">Learning Goals:</label><br>
+    <textarea id="goals" name="learning_goals" rows="4" cols="40" maxlength="400" placeholder="What do you want to achieve from this course?"></textarea>
+  </p>
+
+  <p>
+    <input type="checkbox" id="confirm" name="confirmation" value="confirmed" required>
+    <label for="confirm">I confirm that the information provided above is correct and I agree to the enrollment terms.</label>
+  </p>
+
+  <p>
+    <input type="submit" value="Enroll Now">
+    <input type="reset" value="Reset Form">
+  </p>
+
+</form>
+
+<hr>
+
+</body>
+</html>

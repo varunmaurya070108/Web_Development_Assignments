@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout - Online Store</title>
+</head>
+<body>
+
+<h1>Checkout Page</h1>
+<p>Review your selected products below and fill in your delivery and payment details to place your order.</p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMfYLB-ENtw1wFKgULxaYfyrRIU2QbbWUy0CCLFdYirA&s=10" alt="Online store banner" width="500" height="250">
+
+<h2>Order Summary</h2>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Unit Price</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Wireless Bluetooth Headphones</td>
+    <td>1</td>
+    <td>Rs. 2,499</td>
+    <td>Rs. 2,499</td>
+  </tr>
+  <tr>
+    <td>Cotton T-Shirt (Blue, L)</td>
+    <td>2</td>
+    <td>Rs. 599</td>
+    <td>Rs. 1,198</td>
+  </tr>
+  <tr>
+    <td>Stainless Steel Water Bottle</td>
+    <td>1</td>
+    <td>Rs. 399</td>
+    <td>Rs. 399</td>
+  </tr>
+</table>
+
+<h2>Checkout Form</h2>
+<form action="#" method="post">
+
+  <h3>Customer Information</h3>
+
+  <p>
+    <label for="cust_name">Full Name:</label><br>
+    <input type="text" id="cust_name" name="customer_name" minlength="3" maxlength="60" required>
+  </p>
+
+  <p>
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" autocomplete="email" required>
+  </p>
+
+  <p>
+    <label for="mobile">Mobile Number:</label><br>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10 digit mobile number" required>
+  </p>
+
+  <h3>Delivery Address</h3>
+
+  <p>
+    <label for="street">House No. / Street:</label><br>
+    <input type="text" id="street" name="street_address" maxlength="100" required>
+  </p>
+
+  <p>
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city" maxlength="40" required>
+  </p>
+
+  <p>
+    <label for="state">State:</label><br>
+    <select id="state" name="state" required>
+      <option value="">--Select State--</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="West Bengal">West Bengal</option>
+      <option value="Punjab">Punjab</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="postal_code">Postal Code:</label><br>
+    <input type="text" id="postal_code" name="postal_code" pattern="[0-9]{6}" placeholder="6 digit PIN code" required>
+  </p>
+
+  <p>
+    <label for="country">Country:</label><br>
+    <select id="country" name="country" required>
+      <option value="">--Select Country--</option>
+      <option value="India">India</option>
+      <option value="United States">United States</option>
+      <option value="United Kingdom">United Kingdom</option>
+      <option value="Canada">Canada</option>
+      <option value="Australia">Australia</option>
+    </select>
+  </p>
+
+  <p>
+    <input type="checkbox" id="billing_same" name="billing_same_as_delivery" value="yes">
+    <label for="billing_same">Billing address is the same as delivery address.</label>
+  </p>
+
+  <p>
+    <label for="delivery_instructions">Delivery Instructions:</label><br>
+    <textarea id="delivery_instructions" name="delivery_instructions" rows="3" cols="40" maxlength="200" placeholder="e.g. Leave at front desk"></textarea>
+  </p>
+
+  <h3>Delivery Method</h3>
+  <input type="radio" id="standard" name="delivery_method" value="Standard" required>
+  <label for="standard">Standard (3-5 days)</label><br>
+  <input type="radio" id="express" name="delivery_method" value="Express">
+  <label for="express">Express (1-2 days)</label><br>
+  <input type="radio" id="same_day" name="delivery_method" value="Same Day">
+  <label for="same_day">Same Day</label>
+
+  <h3>Payment Method</h3>
+  <input type="radio" id="card" name="payment_method" value="Card" required>
+  <label for="card">Credit/Debit Card</label><br>
+  <input type="radio" id="cod" name="payment_method" value="Cash on Delivery">
+  <label for="cod">Cash on Delivery</label><br>
+  <input type="radio" id="upi" name="payment_method" value="UPI/Online Payment">
+  <label for="upi">UPI / Online Payment</label>
+
+  <h4>Card Details (if applicable)</h4>
+  <p>
+    <label for="card_name">Card Holder Name:</label><br>
+    <input type="text" id="card_name" name="card_holder_name" maxlength="60">
+  </p>
+
+  <p>
+    <label for="card_number">Card Number:</label><br>
+    <input type="text" id="card_number" name="card_number" pattern="[0-9]{16}" maxlength="16" placeholder="16 digit card number">
+  </p>
+
+  <p>
+    <label for="expiry">Expiry Date:</label><br>
+    <input type="month" id="expiry" name="card_expiry" min="2026-09">
+  </p>
+
+  <p>
+    <label for="cvv">Security Code (CVV):</label><br>
+    <input type="password" id="cvv" name="card_cvv" pattern="[0-9]{3}" maxlength="3" placeholder="3 digit CVV">
+  </p>
+
+  <h3>Promo Code</h3>
+  <p>
+    <label for="coupon">Coupon / Promo Code (optional):</label><br>
+    <input type="text" id="coupon" name="promo_code" maxlength="15" pattern="[A-Z0-9]{4,15}" placeholder="e.g. SAVE20">
+  </p>
+
+  <h3>Confirmation</h3>
+  <p>
+    <input type="checkbox" id="terms" name="terms_accepted" value="accepted" required>
+    <label for="terms">I agree to the Terms &amp; Conditions of this store.</label>
+  </p>
+
+  <p>
+    <input type="checkbox" id="order_confirm" name="order_confirmation" value="confirmed" required>
+    <label for="order_confirm">I confirm that the above order details are correct.</label>
+  </p>
+
+  <p>
+    <input type="submit" value="Place Order">
+    <input type="reset" value="Reset Form">
+  </p>
+
+</form>
+
+<p><a href="https://www.google.com/aclk?sa=L&ai=DChsSEwic7Y3bp8uWAxVaKIMDHRyiH7gYACICCAEQABoCc2Y&co=1&ase=2&gclid=CjwKCAjwzNTUBhAjEiwA7zcvWumD9AQiIIN_7gGPDKZXQikkf--pGDwuNTaCDcRMIRNisrh2N3ZbThoC_YAQAvD_BwE&cid=CAASugHkaLO4in4WajzDmqAR2PUxBVKIC54nx7uv9IRFb51xPcb0XOtLnAAVPxFJDK36kt_6xQgJYHSeIpMv73c0sphVce5mF7ccLwHvZabGfaU575uHG88p9as2eQ5FBdiy83cUFUUxvsGnSaEk6Ww0vjGIOkOTmQ6h1v3QzJHjhxFN2isGS5njNH0ROsklQPrnx5eqVSg2ItcXp6-sK0fbfJO_AgucfMdUS-BKd5riV5PvQZbnfBSVTA2uo7Q&cce=2&category=acrcp_v1_33&sig=AOD64_1njG6ZZTlAMUrBXC7B40MnbPyDvg&q&nis=4&adurl&ved=2ahUKEwjs34fbp8uWAxWdS3ADHT-KIrIQ0Qx6BAgMEAE" target="_blank" rel="noopener noreferrer">Continue Shopping</a></p>
+
+</body>
+</html>

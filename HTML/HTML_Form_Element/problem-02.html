@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clinic Appointment Booking Form</title>
+</head>
+<body>
+
+<h1>Sunrise Health Clinic — Appointment Booking</h1>
+<p>Use the form below to request an appointment with one of our doctors. Please provide accurate
+contact details so our staff can confirm your booking.</p>
+
+<h2>Clinic Timings</h2>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Day</th>
+    <th>Opening Time</th>
+    <th>Closing Time</th>
+  </tr>
+  <tr><td>Monday - Friday</td><td>9:00 AM</td><td>7:00 PM</td></tr>
+  <tr><td>Saturday</td><td>9:00 AM</td><td>2:00 PM</td></tr>
+  <tr><td>Sunday</td><td>Closed</td><td>Closed</td></tr>
+</table>
+
+<h2>Book Your Appointment</h2>
+<form action="#" method="post">
+
+  <p>
+    <label for="patient_name">Patient Name:</label><br>
+    <input type="text" id="patient_name" name="patient_name" minlength="3" maxlength="60" placeholder="Enter full name" required>
+  </p>
+
+  <p>
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+  </p>
+
+  <p>
+    <label for="mobile">Mobile Number:</label><br>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10 digit mobile number" required>
+  </p>
+
+  <p>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" max="2026-08-31" required>
+  </p>
+
+  <p>
+    <label for="patient_id">Patient ID (if existing patient):</label><br>
+    <input type="text" id="patient_id" name="patient_id" placeholder="Optional">
+  </p>
+
+  <p>
+    <label for="appt_date">Preferred Appointment Date:</label><br>
+    <input type="date" id="appt_date" name="appointment_date" min="2026-09-01" required>
+  </p>
+
+  <p>
+    <label for="appt_time">Preferred Appointment Time:</label><br>
+    <input type="time" id="appt_time" name="appointment_time" min="09:00" max="19:00" required>
+  </p>
+
+  <p>
+    <label for="doctor">Select Doctor:</label><br>
+    <select id="doctor" name="doctor" required>
+      <option value="">--Select Doctor--</option>
+      <option value="Dr. Ashok Verma - General Physician">Dr. Ashok Verma - General Physician</option>
+      <option value="Dr. Neha Kapoor - Cardiologist">Dr. Neha Kapoor - Cardiologist</option>
+      <option value="Dr. Rakesh Sinha - Orthopedic">Dr. Rakesh Sinha - Orthopedic</option>
+      <option value="Dr. Priya Malhotra - Dermatologist">Dr. Priya Malhotra - Dermatologist</option>
+      <option value="Dr. Sameer Khan - Pediatrician">Dr. Sameer Khan - Pediatrician</option>
+    </select>
+  </p>
+
+  <p>Visit Type:</p>
+  <input type="radio" id="new_patient" name="visit_type" value="New Patient" required>
+  <label for="new_patient">New Patient</label><br>
+  <input type="radio" id="followup" name="visit_type" value="Follow-up">
+  <label for="followup">Follow-up</label><br>
+  <input type="radio" id="consultation" name="visit_type" value="Consultation">
+  <label for="consultation">Consultation</label><br>
+  <input type="radio" id="emergency" name="visit_type" value="Emergency">
+  <label for="emergency">Emergency</label>
+
+  <p>Preferred Communication Method:</p>
+  <input type="radio" id="comm_phone" name="communication_method" value="Phone Call" required>
+  <label for="comm_phone">Phone Call</label>
+  <input type="radio" id="comm_email" name="communication_method" value="Email">
+  <label for="comm_email">Email</label>
+  <input type="radio" id="comm_sms" name="communication_method" value="SMS">
+  <label for="comm_sms">SMS</label>
+
+  <p>
+    <label for="reason">Reason for Visit / Additional Information:</label><br>
+    <textarea id="reason" name="reason_for_visit" rows="4" cols="40" maxlength="300" placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+  </p>
+
+  <p>
+    <input type="checkbox" id="terms" name="terms_accepted" value="accepted" required>
+    <label for="terms">I accept the clinic's appointment terms and cancellation policy.</label>
+  </p>
+
+  <p>
+    <input type="submit" value="Book Appointment">
+    <input type="reset" value="Reset Form">
+  </p>
+
+</form>
+
+<p>For emergencies, please call our 24x7 emergency helpline: +91 52356 98745</p>
+
+</body>
+</html>
