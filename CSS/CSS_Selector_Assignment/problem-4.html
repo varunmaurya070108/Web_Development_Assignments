@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Periodic Table of Elements</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            padding: 25px;
+        }
+
+        .periodic-table {
+            width: 95%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            gap: 5px;
+        }
+
+        .element {
+            min-height: 75px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 0 2px 4px #ccc;
+        }
+
+        .number {
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .symbol {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        /* Different element colors */
+
+        .nonmetal {
+            background-color: #B3E5FC;
+        }
+
+        .noble {
+            background-color: #E1BEE7;
+        }
+
+        .alkali {
+            background-color: #FFCCBC;
+        }
+
+        .alkaline {
+            background-color: #FFE082;
+        }
+
+        .transition {
+            background-color: #C8E6C9;
+        }
+
+        .metalloid {
+            background-color: #D7CCC8;
+        }
+
+        .halogen {
+            background-color: #F8BBD0;
+        }
+
+        .lanthanide {
+            background-color: #D1C4E9;
+        }
+
+        .actinide {
+            background-color: #B2DFDB;
+        }
+
+        /* Silicon Highlight */
+        .silicon {
+            background-color: #FF9800;
+            color: white;
+            border: 3px solid #E65100;
+            box-shadow: 0 0 10px #FF9800;
+        }
+
+        .series {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .series h2 {
+            text-align: center;
+        }
+
+        .series-row {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 8px;
+        }
+
+        .small-element {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        THE PERIODIC TABLE OF ELEMENTS
+    </h1>
+
+
+    <div class="periodic-table">
+
+        <!-- Period 1 -->
+        <div class="element nonmetal" style="grid-column:1;">
+            <div class="number">1</div>
+            <div class="symbol">H</div>
+        </div>
+
+        <div class="element noble" style="grid-column:18;">
+            <div class="number">2</div>
+            <div class="symbol">He</div>
+        </div>
+
+
+        <!-- Period 2 -->
+        <div class="element alkali" style="grid-column:1;">
+            <div class="number">3</div>
+            <div class="symbol">Li</div>
+        </div>
+
+        <div class="element alkaline" style="grid-column:2;">
+            <div class="number">4</div>
+            <div class="symbol">Be</div>
+        </div>
+
+        <div class="element metalloid" style="grid-column:13;">
+            <div class="number">5</div>
+            <div class="symbol">B</div>
+        </div>
+
+        <div class="element nonmetal" style="grid-column:14;">
+            <div class="number">6</div>
+            <div class="symbol">C</div>
+        </div>
+
+        <div class="element nonmetal" style="grid-column:15;">
+            <div class="number">7</div>
+            <div class="symbol">N</div>
+        </div>
+
+        <div class="element nonmetal" style="grid-column:16;">
+            <div class="number">8</div>
+            <div class="symbol">O</div>
+        </div>
+
+        <div class="element halogen" style="grid-column:17;">
+            <div class="number">9</div>
+            <div class="symbol">F</div>
+        </div>
+
+        <div class="element noble" style="grid-column:18;">
+            <div class="number">10</div>
+            <div class="symbol">Ne</div>
+        </div>
+
+
+        <!-- Period 3 -->
+        <div class="element alkali" style="grid-column:1;">
+            <div class="number">11</div>
+            <div class="symbol">Na</div>
+        </div>
+
+        <div class="element alkaline" style="grid-column:2;">
+            <div class="number">12</div>
+            <div class="symbol">Mg</div>
+        </div>
+
+        <div class="element metalloid" style="grid-column:13;">
+            <div class="number">13</div>
+            <div class="symbol">Al</div>
+        </div>
+
+        <div class="element silicon" style="grid-column:14;">
+            <div class="number">14</div>
+            <div class="symbol">Si</div>
+            <small>Silicon</small>
+        </div>
+
+        <div class="element nonmetal" style="grid-column:15;">
+            <div class="number">15</div>
+            <div class="symbol">P</div>
+        </div>
+
+        <div class="element nonmetal" style="grid-column:16;">
+            <div class="number">16</div>
+            <div class="symbol">S</div>
+        </div>
+
+        <div class="element halogen" style="grid-column:17;">
+            <div class="number">17</div>
+            <div class="symbol">Cl</div>
+        </div>
+
+        <div class="element noble" style="grid-column:18;">
+            <div class="number">18</div>
+            <div class="symbol">Ar</div>
+        </div>
+
+
+        <!-- Period 4 -->
+        <div class="element alkali">
+            <div class="number">19</div>
+            <div class="symbol">K</div>
+        </div>
+
+        <div class="element alkaline">
+            <div class="number">20</div>
+            <div class="symbol">Ca</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">21</div>
+            <div class="symbol">Sc</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">22</div>
+            <div class="symbol">Ti</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">23</div>
+            <div class="symbol">V</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">24</div>
+            <div class="symbol">Cr</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">25</div>
+            <div class="symbol">Mn</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">26</div>
+            <div class="symbol">Fe</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">27</div>
+            <div class="symbol">Co</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">28</div>
+            <div class="symbol">Ni</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">29</div>
+            <div class="symbol">Cu</div>
+        </div>
+
+        <div class="element transition">
+            <div class="number">30</div>
+            <div class="symbol">Zn</div>
+        </div>
+
+        <div class="element metalloid">
+            <div class="number">31</div>
+            <div class="symbol">Ga</div>
+        </div>
+
+        <div class="element metalloid">
+            <div class="number">32</div>
+            <div class="symbol">Ge</div>
+        </div>
+
+        <div class="element metalloid">
+            <div class="number">33</div>
+            <div class="symbol">As</div>
+        </div>
+
+        <div class="element nonmetal">
+            <div class="number">34</div>
+            <div class="symbol">Se</div>
+        </div>
+
+        <div class="element halogen">
+            <div class="number">35</div>
+            <div class="symbol">Br</div>
+        </div>
+
+        <div class="element noble">
+            <div class="number">36</div>
+            <div class="symbol">Kr</div>
+        </div>
+
+    </div>
+
+
+    <!-- Lanthanides and Actinides -->
+
+    <div class="series">
+
+        <h2>Lanthanides</h2>
+
+        <div class="series-row">
+
+            <div class="small-element lanthanide">
+                <small>57</small><br><b>La</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>58</small><br><b>Ce</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>59</small><br><b>Pr</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>60</small><br><b>Nd</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>61</small><br><b>Pm</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>62</small><br><b>Sm</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>63</small><br><b>Eu</b>
+            </div>
+
+            <div class="small-element lanthanide">
+                <small>64</small><br><b>Gd</b>
+            </div>
+
+        </div>
+
+
+        <h2>Actinides</h2>
+
+        <div class="series-row">
+
+            <div class="small-element actinide">
+                <small>89</small><br><b>Ac</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>90</small><br><b>Th</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>91</small><br><b>Pa</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>92</small><br><b>U</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>93</small><br><b>Np</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>94</small><br><b>Pu</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>95</small><br><b>Am</b>
+            </div>
+
+            <div class="small-element actinide">
+                <small>96</small><br><b>Cm</b>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
